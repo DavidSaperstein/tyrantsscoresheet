@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import './App.scss'
+
 function App() {
 
   const initState = {
@@ -47,9 +49,10 @@ function App() {
   
 
   return (
-    <div>
+    <div className='app'>
+      <h1>Tyrants of the Scorecard</h1>
       <form>
-        <label>
+        <label className='labels'>
           VP value of each site you control: 
           <input 
             type='number'
@@ -61,7 +64,7 @@ function App() {
           />
         </label>
 
-        <label>
+        <label className='labels'>
           2 VP for each site under total control: 
           <input 
             type='number'
@@ -73,7 +76,7 @@ function App() {
           />
         </label>
 
-        <label>
+        <label className='labels'>
           1 VP for each troop in your trophy hall:  
           <input 
             type='number'
@@ -85,7 +88,7 @@ function App() {
           />
         </label>
 
-        <label>
+        <label className='labels'>
           Deck, hand and discard VP value: 
           <input 
             type='number'
@@ -97,7 +100,7 @@ function App() {
           />
         </label>
 
-        <label>
+        <label className='labels'>
           Inner-circle VP value: 
           <input 
             type='number'
@@ -109,7 +112,7 @@ function App() {
           />
         </label>
 
-        <label>
+        <label className='labels'>
           VP Tokens 
           <input 
             type='number'
@@ -123,6 +126,7 @@ function App() {
       </form>
       <p>{finalScore}</p>
       <button onClick={handleReset}>Reset</button>
+      <p>Is this the right font</p>
     </div>
   )
 }

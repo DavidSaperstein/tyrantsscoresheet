@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+
+}
+
+label {
+  @font-face {
+    font-family: 'PirateShip';
+    src: url('./PirateShip.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PirateShip';
+    src: url('./PirateShip.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  font-size: 3rem;
+  color: $secondaryText;
+}
+
+.app {
+  background-image: url(./assets/underdark.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include fillscreen-bottomless;
+  @include center-v;
+
+  h1 {
+    font-size: 7rem;
+    background-color: $titleBackgroundColor;
+    color: $primaryText;
+  }
+  
+  form {
+    @include center-v;
+    margin: 10, 0;
+    
+    label {
+      background-color: $backgroundColor;
+    }
+  }
+}
