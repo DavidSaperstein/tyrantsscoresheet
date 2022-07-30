@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
 import './App.scss'
+import  cityMarker  from './assets/cityMarker.png'
+import  innerCircle  from './assets/innerCircle.png'
+import  troopTokens  from './assets/troopTokens.png'
+import  victoryPoints  from './assets/victoryPoints.png'
 
 function App() {
 
@@ -52,77 +56,90 @@ function App() {
     <div className='app'>
       <h1>Tyrants of the Scorecard</h1>
       <form>
-        <label className='labels'>
-          VP value of each site you control: 
-          <input 
-            type='number'
-            name='control'
-            value={scores.control}
-            onChange={handleChange}
-            min='0'
-            required
-          />
-        </label>
+        <img src={cityMarker} alt='Picture of a City Marker' className='images' />
+        <div className='input-container'>
+          <label className='labels'>
+            VP value of each site you control: 
+            <input 
+              type='number'
+              name='control'
+              value={scores.control}
+              onChange={handleChange}
+              min='0'
+              required
+            />
+          </label>
+        </div>
 
-        <label className='labels'>
+        <div className='input-container'>
+          <label className='labels'>
           2 VP for each site under total control: 
-          <input 
-            type='number'
-            name='totalControl'
-            value={scores.totalControl}
-            onChange={handleChange}
-            min='0'
-            required
-          />
-        </label>
+            <input 
+              type='number'
+              name='totalControl'
+              value={scores.totalControl}
+              onChange={handleChange}
+              min='0'
+              required
+            />
+          </label>
+        </div>
 
-        <label className='labels'>
+        <div className='input-container'>
+          <label className='labels'>
           1 VP for each troop in your trophy hall:  
-          <input 
-            type='number'
-            name='trophies'
-            value={scores.trophies}
-            onChange={handleChange}
-            min='0'
-            required
-          />
-        </label>
+            <input 
+              type='number'
+              name='trophies'
+              value={scores.trophies}
+              onChange={handleChange}
+              min='0'
+              required
+            />
+          </label>
+        </div>
 
-        <label className='labels'>
+        <div className='input-container'>
+          <label className='labels'>
           Deck, hand and discard VP value: 
-          <input 
-            type='number'
-            name='deck'
-            value={scores.deck}
-            onChange={handleChange}
-            min='0'
-            required
-          />
-        </label>
+            <input 
+              type='number'
+              name='deck'
+              value={scores.deck}
+              onChange={handleChange}
+              min='0'
+              required
+            />
+          </label>
+        </div>
 
-        <label className='labels'>
+        <div className='input-container'>
+          <label className='labels'>
           Inner-circle VP value: 
-          <input 
-            type='number'
-            name='innerCircle'
-            value={scores.innerCircle}
-            onChange={handleChange}
-            min='0'
-            required
-          />
-        </label>
+            <input 
+              type='number'
+              name='innerCircle'
+              value={scores.innerCircle}
+              onChange={handleChange}
+              min='0'
+              required
+            />
+          </label>
+        </div>
 
-        <label className='labels'>
+        <div className='input-container'>
+          <label className='labels'>
           VP Tokens 
-          <input 
-            type='number'
-            name='tokens'
-            value={scores.tokens}
-            onChange={handleChange}
-            min='0'
-            required
-          />
-        </label>
+            <input 
+              type='number'
+              name='tokens'
+              value={scores.tokens}
+              onChange={handleChange}
+              min='0'
+              required
+            />
+          </label>
+        </div>
       </form>
       <p>{finalScore}</p>
       <button onClick={handleReset}>Reset</button>
